@@ -52,23 +52,29 @@ html {
 }
 
 
-/* Navigation */
-
+/* Navigation - Compact Width Version */
 .navbar {
     background: rgba(15, 23, 42, 0.95);
     backdrop-filter: blur(10px);
     transition: var(--transition);
-    padding: 1rem 0;
+    padding: 0.5rem 0; /* Reduced from 1rem */
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
 }
 
 .navbar.scrolled {
     background: rgba(15, 23, 42, 0.98);
-    padding: 0.5rem 0;
+    padding: 0.3rem 0; /* Reduced from 0.5rem */
+}
+
+/* Control navbar container width */
+.navbar .container,
+.navbar .container-fluid {
+    max-width: 900px; /* Limit overall width */
+    padding: 0 1rem; /* Reduce side padding */
 }
 
 .animated-logo {
-    font-size: 1.5rem;
+    font-size: 1.2rem; /* Reduced from 1.5rem */
     font-weight: bold;
     background: var(--text-gradient);
     -webkit-background-clip: text;
@@ -94,7 +100,8 @@ html {
 .nav-link {
     position: relative;
     transition: color 0.3s ease;
-    padding: 0.5rem 1rem !important;
+    padding: 0.3rem 0.6rem !important; /* Reduced from 0.5rem 1rem */
+    font-size: 0.85rem; /* Smaller font size */
 }
 
 .nav-link:hover,
@@ -119,12 +126,19 @@ html {
     width: 80%;
 }
 
+/* Make navbar items closer together */
+.navbar-nav {
+    gap: 0.2rem; /* Add small gap between items */
+}
+
+.navbar-nav .nav-item {
+    margin: 0 0.1rem; /* Reduce spacing between nav items */
+}
 
 /* Navigation Mobile Improvements */
-
 .navbar-toggler {
     border: none;
-    padding: 0.25rem 0.5rem;
+    padding: 0.2rem 0.4rem; /* Reduced size */
 }
 
 .navbar-toggler:focus {
@@ -134,11 +148,44 @@ html {
 .navbar-collapse {
     background: rgba(15, 23, 42, 0.98);
     backdrop-filter: blur(10px);
-    border-radius: 10px;
-    margin-top: 1rem;
-    padding: 1rem;
+    border-radius: 8px; /* Slightly smaller radius */
+    margin-top: 0.5rem; /* Reduced from 1rem */
+    padding: 0.75rem; /* Reduced from 1rem */
 }
 
+/* Additional compact styles for desktop */
+@media (min-width: 768px) {
+    .navbar {
+        padding: 0.4rem 0;
+    }
+    
+    .navbar.scrolled {
+        padding: 0.2rem 0;
+    }
+    
+    /* Make the entire navbar narrower */
+    .navbar .container,
+    .navbar .container-fluid {
+        max-width: 800px; /* Even smaller on desktop */
+    }
+}
+
+/* Extra compact version - uncomment if you want very small */
+/*
+.navbar .container,
+.navbar .container-fluid {
+    max-width: 600px;
+}
+
+.nav-link {
+    padding: 0.2rem 0.4rem !important;
+    font-size: 0.8rem;
+}
+
+.animated-logo {
+    font-size: 1rem;
+}
+*/
 
 /* Hero Section */
 
