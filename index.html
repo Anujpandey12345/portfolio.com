@@ -9,14 +9,13 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
     <link rel="stylesheet" href='style.css'>
-
 </head>
 
 <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand animated-logo" href="#home">
+            <a class="navbar-brand animated-logo" href="#education">
                 <i class="fas fa-code"></i>
                 <span class="logo-text">Anuj Kumar</span>
             </a>
@@ -27,7 +26,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#home">Home</a>
+                        <a class="nav-link" href="#education">Education</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#about">About</a>
@@ -49,37 +48,58 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero-section">
+    <!-- Education Section -->
+    <section id="education" class="education-section section-padding">
+        <div class="floating-shapes">
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+        </div>
         <div class="container">
-            <div class="row align-items-center min-vh-100">
-                <div class="col-lg-6 col-md-12 order-2 order-lg-1" data-aos="fade-right">
-                    <div class="hero-content">
-                        <h1 class="hero-title">
-                            Hi, I'm <span class="text-gradient">Anuj Kumar</span>
-                        </h1>
-                        <h3 class="hero-subtitle">Back-end Developer</h3>
-                        <p class="hero-description">
-                            Passionate developer specializing in Python, Django, RabbitMQ, Kafka, Celery, Channels and modern web technologies. I build
-                            scalable applications with clean code and innovative solutions.
-                        </p>
+            <div class="education-content">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="education-title" data-aos="fade-up">My Education</h2>
+                        
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-5 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="education-card">
+                            <div class="degree-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <h4>Master of Computer Applications</h4>
+                            <p class="institution">IMSEC Ghaziabad</p>
+                            <p class="duration">2024 - 2026</p>
+                            <div class="education-details">
+                                <p>Advanced studies in computer science with focus on software development, algorithms, and system design.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                        <div class="education-card">
+                            <div class="degree-icon bachelor">
+                                <i class="fas fa-university"></i>
+                            </div>
+                            <h4>Bachelor of Computer Applications</h4>
+                            <p class="institution">Signa College</p>
+                            <p class="duration">2021 - 2024</p>
+                            <div class="education-details">
+                                <p>Comprehensive foundation in computer applications, programming languages, and software development principles.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-12 text-center" data-aos="fade-up" data-aos-delay="400">
                         <div class="hero-buttons">
-                            <a href="#projects" class="btn btn-primary btn-lg">View Projects</a>
+                            <a href="#projects" class="btn btn-primary btn-lg">View My Projects</a>
                             <a href="#contact" class="btn btn-outline-light btn-lg">Get In Touch</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-12 order-1 order-lg-2" data-aos="fade-left">
-                    <div class="hero-image text-center">
-                        <div class="profile-container">
-                            <img src="images/mypic.png" alt="Anuj Kumar" class="img-fluid rounded-circle profile-img">
-                        </div>
-                    </div>
-                </div>
             </div>
-        </div>
-        <div class="scroll-indicator d-none d-md-block">
-            <div class="scroll-arrow"></div>
         </div>
     </section>
 
@@ -110,20 +130,6 @@
                             Redis, PostgreSQL, RabbitMQ, and Kafka. I believe in writing clean, maintainable code and
                             following best practices to deliver high-quality solutions.
                         </p>
-                        <!-- <div class="stats-container">
-                            <div class="stat-item">
-                                <h4 class="stat-number" data-target="50">0</h4>
-                                <p class="stat-label">Projects Completed</p>
-                            </div>
-                            <div class="stat-item">
-                                <h4 class="stat-number" data-target="3">0</h4>
-                                <p class="stat-label">Years Experience</p>
-                            </div>
-                            <div class="stat-item">
-                                <h4 class="stat-number" data-target="100">0</h4>
-                                <p class="stat-label">Happy Clients</p>
-                            </div>
-                        </div> -->
                     </div>
                 </div>
             </div>
@@ -332,7 +338,7 @@
                         </div>
                         <h4>Download My Resume</h4>
                         <p class="mb-4">Get a detailed overview of my experience, education, and skills.</p>
-                        <a href="https://drive.google.com/file/d/1IJvYfCsXB45Gjzs8jy6iPij8ek9SWPQK/view?usp=sharing"
+                        <a href="https://drive.google.com/file/d/1pBoB4IRCvqHLr0_S5u3Sd5PrBz2pm5HF/view?usp=sharing"
                             class="btn btn-primary btn-lg" target="_blank">
                             <i class="fas fa-download me-2"></i>Download Resume
                         </a>
@@ -352,10 +358,6 @@
             </div>
         </div>
     </footer>
-    <!-- Back to Top Button
-    <button id="back-to-top" class="btn btn-primary back-to-top" aria-label="Back to top">
-        <i class="fas fa-chevron-up"></i>
-    </button> -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
@@ -373,28 +375,22 @@
         {
             id: 2,
             title: "Authentication",
-            description: "Built a powerful authentication system using Django’s built-in features, ensuring top-level security. It includes user registration, login, password hashing, and session management. Additional layers like email verification and two-step authentication enhance protection. The system safeguards user data, prevents unauthorized access, and offers a seamless, secure experience across web applications.",
+            description: "Built a powerful authentication system using Django's built-in features, ensuring top-level security. It includes user registration, login, password hashing, and session management. Additional layers like email verification and two-step authentication enhance protection. The system safeguards user data, prevents unauthorized access, and offers a seamless, secure experience across web applications.",
             image: "images/auth.png",
             technologies: ["Python", "Django", "SQLite"],
             github: "https://github.com/Anujpandey12345/Authentication_site",
             live: ""
         },
-            {
-                id: 3,
-               title: "LLD ChatRoom Server",
-                description: "The **LLD ChatRoom Server** in C++ showcases advanced design using **sockets**, **threading**, and **Boost.Asio** for efficient asynchronous communication. It applies **OOP principles**, ensuring modularity and scalability. The project incorporates robust **memory management**, custom **protocol design**, and concurrency control, creating a reliable, high-performance chat server suitable for real-time interactions and distributed systems.",
-
-                image: "images/chat.png",
-                technologies: ["C++", "Boost::asio", "Makefile", "Socket.IO", "threading", "protocol design"],
-                github: "https://github.com/Anujpandey12345/LLD-CHAT-APP-CPP",
-         },
-        ];
-
+        {
+            id: 3,
+            title: "LLD ChatRoom Server",
+            description: "The **LLD ChatRoom Server** in C++ showcases advanced design using **sockets**, **threading**, and **Boost.Asio** for efficient asynchronous communication. It applies **OOP principles**, ensuring modularity and scalability. The project incorporates robust **memory management**, custom **protocol design**, and concurrency control, creating a reliable, high-performance chat server suitable for real-time interactions and distributed systems.",
+            image: "images/chat.png",
+            technologies: ["C++", "Boost::asio", "Makefile", "Socket.IO", "threading", "protocol design"],
+            github: "https://github.com/Anujpandey12345/LLD-CHAT-APP-CPP",
+        }];
     </script>
-
 
 </body>
 
-
 </html>
-
