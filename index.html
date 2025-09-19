@@ -12,379 +12,381 @@
     <script src="https://unpkg.com/@barba/core"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.38/bundled/lenis.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.38/bundled/lenis.min.js"></script>
+
 </head>
 
 <body>
     <div data-barba="container" data-barba-namespace="home">
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand animated-logo" href="#education">
-                <i class="fas fa-code"></i>
-                <span class="logo-text">Anuj Kumar</span>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#education">Education</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#skills">Skills</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#projects">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#resume">Resume</a>
-                    </li>
-                </ul>
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand animated-logo" href="#education">
+                    <i class="fas fa-code"></i>
+                    <span class="logo-text">Anuj Kumar</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#education">Education</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#skills">Skills</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#projects">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#resume">Resume</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
 
-    <!-- Education Section -->
-    <section id="education" class="education-section section-padding">
-        <div class="floating-shapes">
-            <div class="shape"></div>
-            <div class="shape"></div>
-            <div class="shape"></div>
-        </div>
-        <div class="container">
-            <div class="education-content">
+        <!-- About Section -->
+        <section id="about" class="section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center mb-5">
+                        <h2 class="section-title" data-aos="fade-up">About Me</h2>
+                    </div>
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-md-12 mb-4 mb-lg-0" data-aos="fade-right">
+                        <div class="about-image-container">
+                            <img src='images/mypic1.png' alt="About Me" class="img-fluid rounded about-img">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12" data-aos="fade-left">
+                        <div class="about-content">
+                            <h3>Back-End Developer & Python Enthusiast</h3>
+                            <p>
+                                I am a passionate back-end developer specializing in Python, Django, and modern web
+                                technologies. With a strong foundation in backend development, I create robust and
+                                scalable applications that deliver exceptional user experiences.<br><br>
+                                My journey in software development has given me hands-on experience with technologies
+                                such as Redis, PostgreSQL, RabbitMQ, and Kafka. I am committed to writing clean,
+                                maintainable code and following best practices to deliver high-quality solutions.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="education-section section-padding">
+            <div class="floating-shapes">
+                <div class="shape"></div>
+                <div class="shape"></div>
+                <div class="shape"></div>
+            </div>
+            <div class="container">
+                <div class="education-content">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2 class="education-title" data-aos="fade-up">My Education</h2>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-5 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                            <div class="education-card">
+                                <div class="degree-icon">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </div>
+                                <h4>Master of Computer Applications</h4>
+                                <p class="institution">IMSEC Ghaziabad</p>
+                                <p class="duration">2024 - 2026</p>
+                                <div class="education-details">
+                                    <p>Advanced studies in computer science with focus on software development,
+                                        algorithms, and system design.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                            <div class="education-card">
+                                <div class="degree-icon bachelor">
+                                    <i class="fas fa-university"></i>
+                                </div>
+                                <h4>Bachelor of Computer Applications</h4>
+                                <p class="institution">Signa College</p>
+                                <p class="duration">2021 - 2024</p>
+                                <div class="education-details">
+                                    <p>Comprehensive foundation in computer applications, programming languages, and
+                                        software development principles.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-12 text-center" data-aos="fade-up" data-aos-delay="400">
+                            <div class="hero-buttons">
+                                <a href="#projects" class="btn btn-primary btn-lg">View My Projects</a>
+                                <a href="#contact" class="btn btn-outline-light btn-lg">Get In Touch</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Skills Section -->
+        <section id="skills" class="section-padding bg-dark">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center mb-5">
+                        <h2 class="section-title text-white" data-aos="fade-up">Skills & Technologies</h2>
+                    </div>
+                </div>
                 <div class="row">
                     <div class="col-12">
-                        <h2 class="education-title" data-aos="fade-up">My Education</h2>
-                        
-                    </div>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col-lg-5 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
-                        <div class="education-card">
-                            <div class="degree-icon">
-                                <i class="fas fa-graduation-cap"></i>
-                            </div>
-                            <h4>Master of Computer Applications</h4>
-                            <p class="institution">IMSEC Ghaziabad</p>
-                            <p class="duration">2024 - 2026</p>
-                            <div class="education-details">
-                                <p>Advanced studies in computer science with focus on software development, algorithms, and system design.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-5 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
-                        <div class="education-card">
-                            <div class="degree-icon bachelor">
-                                <i class="fas fa-university"></i>
-                            </div>
-                            <h4>Bachelor of Computer Applications</h4>
-                            <p class="institution">Signa College</p>
-                            <p class="duration">2021 - 2024</p>
-                            <div class="education-details">
-                                <p>Comprehensive foundation in computer applications, programming languages, and software development principles.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row mt-4">
-                    <div class="col-12 text-center" data-aos="fade-up" data-aos-delay="400">
-                        <div class="hero-buttons">
-                            <a href="#projects" class="btn btn-primary btn-lg">View My Projects</a>
-                            <a href="#contact" class="btn btn-outline-light btn-lg">Get In Touch</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center mb-5">
-                    <h2 class="section-title" data-aos="fade-up">About Me</h2>
-                </div>
-            </div>
-            <div class="row align-items-center">
-                <div class="col-lg-6 col-md-12 mb-4 mb-lg-0" data-aos="fade-right">
-                    <div class="about-image-container">
-                        <img src='images/mypic1.png' alt="About Me" class="img-fluid rounded about-img">
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-12" data-aos="fade-left">
-                    <div class="about-content">
-                        <h3>Back End Developer & Python Enthusiast</h3>
-                        <p>
-                            I'm a passionate Back-End developer with expertise in Python, Django, and modern web
-                            technologies. With a strong foundation in backend development, I create robust, scalable
-                            applications that deliver exceptional user experiences.
-                        </p>
-                        <p>
-                            My journey in software development has led me to work with cutting-edge technologies like
-                            Redis, PostgreSQL, RabbitMQ, and Kafka. I believe in writing clean, maintainable code and
-                            following best practices to deliver high-quality solutions.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="section-padding bg-dark">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center mb-5">
-                    <h2 class="section-title text-white" data-aos="fade-up">Skills & Technologies</h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <div class="skills-grid">
-                        <div class="skill-item" data-aos="zoom-in" data-aos-delay="100">
-                            <div class="skill-icon html-icon">
-                                <i class="fab fa-html5"></i>
-                            </div>
-                            <h5>HTML5</h5>
-                        </div>
-                        <div class="skill-item" data-aos="zoom-in" data-aos-delay="200">
-                            <div class="skill-icon css-icon">
-                                <i class="fab fa-css3-alt"></i>
-                            </div>
-                            <h5>CSS3</h5>
-                        </div>
-                        <div class="skill-item" data-aos="zoom-in" data-aos-delay="300">
-                            <div class="skill-icon js-icon">
-                                <i class="fab fa-js-square"></i>
-                            </div>
-                            <h5>JavaScript</h5>
-                        </div>
-                        <div class="skill-item" data-aos="zoom-in" data-aos-delay="400">
-                            <div class="skill-icon python-icon">
-                                <i class="fab fa-python"></i>
-                            </div>
-                            <h5>Python</h5>
-                        </div>
-                        <div class="skill-item" data-aos="zoom-in" data-aos-delay="500">
-                            <div class="skill-icon django-icon">
-                                <i class="fas fa-server"></i>
-                            </div>
-                            <h5>Django</h5>
-                        </div>
-                        <div class="skill-item" data-aos="zoom-in" data-aos-delay="600">
-                            <div class="skill-icon flask-icon">
-                                <i class="fas fa-flask"></i>
-                            </div>
-                            <h5>Flask</h5>
-                        </div>
-                        <div class="skill-item" data-aos="zoom-in" data-aos-delay="700">
-                            <div class="skill-icon drf-icon">
-                                <i class="fas fa-api"></i>
-                            </div>
-                            <h5>Django REST</h5>
-                        </div>
-                        <div class="skill-item" data-aos="zoom-in" data-aos-delay="800">
-                            <div class="skill-icon postgresql-icon">
-                                <i class="fas fa-database"></i>
-                            </div>
-                            <h5>PostgreSQL</h5>
-                        </div>
-                        <div class="skill-item" data-aos="zoom-in" data-aos-delay="900">
-                            <div class="skill-icon redis-icon">
-                                <i class="fas fa-memory"></i>
-                            </div>
-                            <h5>Redis</h5>
-                        </div>
-                        <div class="skill-item" data-aos="zoom-in" data-aos-delay="1000">
-                            <div class="skill-icon rabbitmq-icon">
-                                <i class="fas fa-exchange-alt"></i>
-                            </div>
-                            <h5>RabbitMQ</h5>
-                        </div>
-                        <div class="skill-item" data-aos="zoom-in" data-aos-delay="1100">
-                            <div class="skill-icon kafka-icon">
-                                <i class="fas fa-stream"></i>
-                            </div>
-                            <h5>Kafka</h5>
-                        </div>
-                        <div class="skill-item" data-aos="zoom-in" data-aos-delay="1200">
-                            <div class="skill-icon cpp-icon">
-                                <i class="fas fa-code"></i>
-                            </div>
-                            <h5>C++</h5>
-                        </div>
-                        <div class="skill-item" data-aos="zoom-in" data-aos-delay="1300">
-                            <div class="skill-icon c-icon">
-                                <i class="fas fa-terminal"></i>
-                            </div>
-                            <h5>C</h5>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center mb-5">
-                    <h2 class="section-title" data-aos="fade-up">Featured Projects</h2>
-                </div>
-            </div>
-            <div class="row" id="projects-container">
-                <!-- Projects will be dynamically loaded here -->
-            </div>
-        </div>
-    </section>
-    <script src='projects.js'></script>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section-padding bg-dark">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center mb-5">
-                    <h2 class="section-title text-white" data-aos="fade-up">Get In Touch</h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-8 col-xl-6 mx-auto">
-                    <div class="contact-form-container" data-aos="fade-up">
-                        <form method="POST" action="#" id="contact-form" class="contact-form">
-                            <div class="row g-3">
-                                <div class="col-md-6">
-                                    <input type="text" class="form-control" name="name" placeholder="Your Name"
-                                        required>
+                        <div class="skills-grid">
+                            <div class="skill-item" data-aos="zoom-in" data-aos-delay="100">
+                                <div class="skill-icon html-icon">
+                                    <i class="fab fa-html5"></i>
                                 </div>
-                                <div class="col-md-6">
-                                    <input type="tel" class="form-control" name="phone" placeholder="Phone Number"
-                                        required>
-                                </div>
-                                <div class="col-12">
-                                    <input type="email" class="form-control" name="email" placeholder="Your Email"
-                                        required>
-                                </div>
-                                <div class="col-12">
-                                    <textarea class="form-control" name="message" rows="5" maxlength="500"
-                                        placeholder="Your Message" required></textarea>
-                                    <small id="charCount">500 characters remaining</small>
-                                </div>
-                                <div class="col-12 text-center">
-                                    <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
-                                </div>
+                                <h5>HTML5</h5>
                             </div>
-                        </form>
+                            <div class="skill-item" data-aos="zoom-in" data-aos-delay="200">
+                                <div class="skill-icon css-icon">
+                                    <i class="fab fa-css3-alt"></i>
+                                </div>
+                                <h5>CSS3</h5>
+                            </div>
+                            <div class="skill-item" data-aos="zoom-in" data-aos-delay="300">
+                                <div class="skill-icon js-icon">
+                                    <i class="fab fa-js-square"></i>
+                                </div>
+                                <h5>JavaScript</h5>
+                            </div>
+                            <div class="skill-item" data-aos="zoom-in" data-aos-delay="400">
+                                <div class="skill-icon python-icon">
+                                    <i class="fab fa-python"></i>
+                                </div>
+                                <h5>Python</h5>
+                            </div>
+                            <div class="skill-item" data-aos="zoom-in" data-aos-delay="500">
+                                <div class="skill-icon django-icon">
+                                    <i class="fas fa-server"></i>
+                                </div>
+                                <h5>Django</h5>
+                            </div>
+                            <div class="skill-item" data-aos="zoom-in" data-aos-delay="600">
+                                <div class="skill-icon flask-icon">
+                                    <i class="fas fa-flask"></i>
+                                </div>
+                                <h5>Flask</h5>
+                            </div>
+                            <div class="skill-item" data-aos="zoom-in" data-aos-delay="700">
+                                <div class="skill-icon drf-icon">
+                                    <i class="fas fa-api"></i>
+                                </div>
+                                <h5>Django REST</h5>
+                            </div>
+                            <div class="skill-item" data-aos="zoom-in" data-aos-delay="800">
+                                <div class="skill-icon postgresql-icon">
+                                    <i class="fas fa-database"></i>
+                                </div>
+                                <h5>PostgreSQL</h5>
+                            </div>
+                            <div class="skill-item" data-aos="zoom-in" data-aos-delay="900">
+                                <div class="skill-icon redis-icon">
+                                    <i class="fas fa-memory"></i>
+                                </div>
+                                <h5>Redis</h5>
+                            </div>
+                            <div class="skill-item" data-aos="zoom-in" data-aos-delay="1000">
+                                <div class="skill-icon rabbitmq-icon">
+                                    <i class="fas fa-exchange-alt"></i>
+                                </div>
+                                <h5>RabbitMQ</h5>
+                            </div>
+                            <div class="skill-item" data-aos="zoom-in" data-aos-delay="1100">
+                                <div class="skill-icon kafka-icon">
+                                    <i class="fas fa-stream"></i>
+                                </div>
+                                <h5>Kafka</h5>
+                            </div>
+                            <div class="skill-item" data-aos="zoom-in" data-aos-delay="1200">
+                                <div class="skill-icon cpp-icon">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                                <h5>C++</h5>
+                            </div>
+                            <div class="skill-item" data-aos="zoom-in" data-aos-delay="1300">
+                                <div class="skill-icon c-icon">
+                                    <i class="fas fa-terminal"></i>
+                                </div>
+                                <h5>C</h5>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="row mt-5">
-                <div class="col-12">
-                    <div class="social-links text-center" data-aos="fade-up">
-                        <h4 class="text-white mb-4">Connect With Me</h4>
-                        <div class="social-icons-container">
-                            <a href="https://www.linkedin.com/in/anujk01/" target="_blank" class="social-link linkedin"
-                                aria-label="LinkedIn Profile">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                            <a href="https://x.com/aanujdotcom" target="_blank" class="social-link twitter"
-                                aria-label="Twitter Profile">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="https://github.com/Anujpandey12345" target="_blank" class="social-link github"
-                                aria-label="GitHub Profile">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="https://leetcode.com/u/anujpandey61687/" target="_blank" class="social-icon leetcode"
-                                aria-label="LeetCode Profile">
-                                <div class="platform-text">LC</div>
-                            </a>
+        </section>
 
-                            <a href="https://www.geeksforgeeks.org/user/anujpandey12345/" target="_blank"
-                                class="social-icon geeksforgeeks" aria-label="GeeksforGeeks Profile">
-                                <div class="platform-text">GFG</div>
-                            </a>
+        <!-- Projects Section -->
+        <section id="projects" class="section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center mb-5">
+                        <h2 class="section-title" data-aos="fade-up">Featured Projects</h2>
+                    </div>
+                </div>
+                <div class="row" id="projects-container">
+                    <!-- Projects will be dynamically loaded here -->
+                </div>
+            </div>
+        </section>
+        <script src='projects.js'></script>
 
-                            <a href="https://www.codechef.com/users/anujpandey1" target="_blank"
-                                class="social-icon codechef" aria-label="CodeChef Profile">
-                                <div class="platform-text">CC</div>
+        <!-- Contact Section -->
+        <section id="contact" class="section-padding bg-dark">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center mb-5">
+                        <h2 class="section-title text-white" data-aos="fade-up">Get In Touch</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-8 col-xl-6 mx-auto">
+                        <div class="contact-form-container" data-aos="fade-up">
+                            <form method="POST" action="#" id="contact-form" class="contact-form">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" name="name" placeholder="Your Name"
+                                            required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="tel" class="form-control" name="phone" placeholder="Phone Number"
+                                            required>
+                                    </div>
+                                    <div class="col-12">
+                                        <input type="email" class="form-control" name="email" placeholder="Your Email"
+                                            required>
+                                    </div>
+                                    <div class="col-12">
+                                        <textarea class="form-control" name="message" rows="5" maxlength="500"
+                                            placeholder="Your Message" required></textarea>
+                                        <small id="charCount">500 characters remaining</small>
+                                    </div>
+                                    <div class="col-12 text-center">
+                                        <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-12">
+                        <div class="social-links text-center" data-aos="fade-up">
+                            <h4 class="text-white mb-4">Connect With Me</h4>
+                            <div class="social-icons-container">
+                                <a href="https://www.linkedin.com/in/anujk01/" target="_blank"
+                                    class="social-link linkedin" aria-label="LinkedIn Profile">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                                <a href="https://x.com/aanujdotcom" target="_blank" class="social-link twitter"
+                                    aria-label="Twitter Profile">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="https://github.com/Anujpandey12345" target="_blank" class="social-link github"
+                                    aria-label="GitHub Profile">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://leetcode.com/u/anujpandey61687/" target="_blank"
+                                    class="social-icon leetcode" aria-label="LeetCode Profile">
+                                    <div class="platform-text">LC</div>
+                                </a>
+
+                                <a href="https://www.geeksforgeeks.org/user/anujpandey12345/" target="_blank"
+                                    class="social-icon geeksforgeeks" aria-label="GeeksforGeeks Profile">
+                                    <div class="platform-text">GFG</div>
+                                </a>
+
+                                <a href="https://www.codechef.com/users/anujpandey1" target="_blank"
+                                    class="social-icon codechef" aria-label="CodeChef Profile">
+                                    <div class="platform-text">CC</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resume Section -->
+        <section id="resume" class="section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center mb-5">
+                        <h2 class="section-title" data-aos="fade-up">Resume</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 col-xl-4 mx-auto text-center" data-aos="fade-up">
+                        <div class="resume-container">
+                            <div class="resume-icon mb-3">
+                                <i class="fas fa-file-pdf fa-3x text-primary"></i>
+                            </div>
+                            <h4>Download My Resume</h4>
+                            <p class="mb-4">Get a detailed overview of my experience, education, and skills.</p>
+                            <a href="https://drive.google.com/file/d/1pBoB4IRCvqHLr0_S5u3Sd5PrBz2pm5HF/view?usp=sharing"
+                                class="btn btn-primary btn-lg" target="_blank">
+                                <i class="fas fa-download me-2"></i>Download Resume
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Resume Section -->
-    <section id="resume" class="section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center mb-5">
-                    <h2 class="section-title" data-aos="fade-up">Resume</h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-6 col-xl-4 mx-auto text-center" data-aos="fade-up">
-                    <div class="resume-container">
-                        <div class="resume-icon mb-3">
-                            <i class="fas fa-file-pdf fa-3x text-primary"></i>
-                        </div>
-                        <h4>Download My Resume</h4>
-                        <p class="mb-4">Get a detailed overview of my experience, education, and skills.</p>
-                        <a href="https://drive.google.com/file/d/1pBoB4IRCvqHLr0_S5u3Sd5PrBz2pm5HF/view?usp=sharing"
-                            class="btn btn-primary btn-lg" target="_blank">
-                            <i class="fas fa-download me-2"></i>Download Resume
-                        </a>
+        <!-- Footer -->
+        <footer class="bg-dark text-white text-center py-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <p class="mb-0">&copy; 2025 Anuj Kumar. All rights reserved.</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </footer>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-4">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <p class="mb-0">&copy; 2025 Anuj Kumar. All rights reserved.</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     </div>
     <script src='script.js'></script>
-        <script>
-                    // Enhanced Lenis for ultra-smooth scrolling
-                    const lenis = new Lenis({
-                        duration: 1.5,
-                        smooth: true,
-                        direction: 'vertical',
-                        gestureDirection: 'vertical',
-                        smoothTouch: true,
-                        touchMultiplier: 3.5,
-                        easing: (t) => 1 - Math.pow(1 - t, 3) // cubic ease-out
-                    });
-                    function raf(time) {
-                        lenis.raf(time);
-                        requestAnimationFrame(raf);
-                    }
-                    requestAnimationFrame(raf);
-        </script>
-        <script>
+    <script>
+        // Enhanced Lenis for ultra-smooth scrolling
+        const lenis = new Lenis({
+            duration: 1.5,
+            smooth: true,
+            direction: 'vertical',
+            gestureDirection: 'vertical',
+            smoothTouch: true,
+            touchMultiplier: 3.5,
+            easing: (t) => 1 - Math.pow(1 - t, 3) // cubic ease-out
+        });
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+    </script>
+    <script>
         barba.init({
             transitions: [
                 {
@@ -407,8 +409,8 @@
                 }
             ]
         });
-        </script>
-        <script>
+    </script>
+    <script>
         barba.init({
             transitions: [
                 {
@@ -440,7 +442,7 @@
                 }
             ]
         });
-        </script>
+    </script>
     <script>
         let projects = [{
             id: 1,
@@ -469,6 +471,28 @@
             github: "https://github.com/Anujpandey12345/LLD-CHAT-APP-CPP",
         }];
     </script>
+
+    <!-- Lenis Smooth Scroll -->
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@latest/bundled/lenis.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const lenis = new Lenis({
+                duration: 1.2,
+                easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+                smooth: true,
+                smoothTouch: false,
+            });
+
+            function raf(time) {
+                lenis.raf(time);
+                requestAnimationFrame(raf);
+            }
+
+            requestAnimationFrame(raf);
+        });
+    </script>
+
 
 </body>
 

@@ -1706,3 +1706,8 @@ if ('serviceWorker' in navigator) {
                 });
         });
     }
+
+
+lenis.scrollTo(0);
+const mySection = document.querySelector('#contact');
+lenis.scrollTo(mySection);
