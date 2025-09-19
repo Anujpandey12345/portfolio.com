@@ -1,18 +1,19 @@
 /* Custom Properties */
 
+
 :root {
-    --primary-color: #6366f1;
-    --secondary-color: #8b5cf6;
-    --accent-color: #06b6d4;
-    --dark-color: #0f172a;
-    --light-color: #f8fafc;
-    --gradient: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    --text-gradient: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-    --shadow-light: 0 4px 6px rgba(0, 0, 0, 0.1);
-    --shadow-medium: 0 10px 25px rgba(0, 0, 0, 0.15);
-    --shadow-heavy: 0 20px 40px rgba(0, 0, 0, 0.2);
-    --border-radius: 15px;
-    --transition: all 0.3s ease;
+    --primary-color: #ff003c;
+    --secondary-color: #1a1a1a;
+    --accent-color: #ff1e56;
+    --dark-color: #000000;
+    --light-color: #fff;
+    --gradient: linear-gradient(135deg, #ff003c 0%, #1a1a1a 100%);
+    --text-gradient: linear-gradient(90deg, #ff003c 0%, #ff1e56 100%);
+    --shadow-light: 0 4px 6px rgba(255, 0, 60, 0.08);
+    --shadow-medium: 0 10px 25px rgba(255, 0, 60, 0.12);
+    --shadow-heavy: 0 20px 40px rgba(255, 0, 60, 0.18);
+    --border-radius: 18px;
+    --transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
 }
 
 
@@ -24,11 +25,15 @@
     box-sizing: border-box;
 }
 
+
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     line-height: 1.6;
-    color: #333;
+    color: var(--light-color);
+    background: var(--dark-color);
     overflow-x: hidden;
+    min-height: 100vh;
+    transition: background 0.5s, color 0.5s;
 }
 
 html {
@@ -52,12 +57,21 @@ html {
 }
 
 /* Navigation */
+/* Navigation */
 .navbar {
-    background: rgba(15, 23, 42, 0.95);
+    background: rgba(0, 0, 0, 0.98);
     backdrop-filter: blur(10px);
     transition: var(--transition);
     padding: 1rem 0;
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 20px rgba(255, 0, 60, 0.08);
+}
+
+.navbar .navbar-brand, .navbar .nav-link {
+    color: var(--primary-color) !important;
+}
+
+.navbar .nav-link.active, .navbar .nav-link:hover {
+    color: var(--accent-color) !important;
 }
 
 .navbar.scrolled {
@@ -65,8 +79,9 @@ html {
     padding: 0.5rem 0;
 }
 
+
 .animated-logo {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     font-weight: bold;
     background: var(--text-gradient);
     -webkit-background-clip: text;
@@ -74,6 +89,21 @@ html {
     -webkit-text-fill-color: transparent;
     text-decoration: none;
     animation: logoGlow 2s ease-in-out infinite alternate;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+}
+
+.logo-text {
+    display: inline-block !important;
+    font-weight: 800;
+    font-size: 1.1em;
+    margin-left: 0.3em;
+    background: none;
+    color: #fff !important;
+    -webkit-background-clip: unset;
+    -webkit-text-fill-color: unset;
+    background-clip: unset;
 }
 
 .logo-text {
@@ -82,11 +112,10 @@ html {
 
 @keyframes logoGlow {
     from {
-        filter: drop-shadow(0 0 5px rgba(99, 102, 241, 0.5));
+        filter: drop-shadow(0 0 5px rgba(255, 0, 60, 0.5));
     }
-
     to {
-        filter: drop-shadow(0 0 15px rgba(99, 102, 241, 0.8));
+        filter: drop-shadow(0 0 15px rgba(255, 0, 60, 0.8));
     }
 }
 
@@ -136,14 +165,16 @@ html {
     padding: 1rem;
 }
 
+
 .hero-section {
-    background: linear-gradient(135deg, var(--dark-color), #1e293b);
-    color: white;
+    background: var(--gradient);
+    color: var(--light-color);
     position: relative;
     overflow: hidden;
     min-height: 100vh;
     display: flex;
     align-items: center;
+    box-shadow: var(--shadow-medium);
 }
 
 .hero-section::before {
@@ -175,19 +206,46 @@ html {
     line-height: 1.2;
 }
 
-.text-gradient {
-    background: var(--text-gradient);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: gradientShift 3s ease-in-out infinite;
+/* Responsive improvements */
+@media (max-width: 991px) {
+    .navbar-collapse {
+        margin-top: 0.5rem;
+        padding: 0.5rem;
+    }
+    .hero-title {
+        font-size: 2.2rem;
+    }
 }
 
-@keyframes gradientShift {
+@media (max-width: 767px) {
+    .hero-section {
+        min-height: 70vh;
+        padding: 2rem 0;
+    }
+    .hero-title {
+        font-size: 1.5rem;
+    }
+    .about-img {
+        max-width: 220px;
+    }
+}
 
-    0%,
+@media (max-width: 575px) {
+    .navbar {
+        padding: 0.5rem 0;
+    }
+    .hero-title {
+        font-size: 1.1rem;
+    }
+}
+
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
     100% {
-        filter: hue-rotate(0deg);
+        background-position: 100% 50%;
     }
 
     50% {
@@ -1442,6 +1500,18 @@ html {
     align-items: center;
     padding: 150px 0 60px;
 }
+    .education-section {
+        background: linear-gradient(120deg, #ff003c 0%, #1a1a1a 100%);
+        color: #fff;
+        position: relative;
+        overflow: hidden;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        padding: 150px 0 60px;
+        box-shadow: 0 10px 40px rgba(255,0,60,0.15);
+        border-bottom: 4px solid #ff003c;
+    }
 
 .education-section::before {
     content: '';
@@ -1452,6 +1522,16 @@ html {
     bottom: 0;
     background: rgba(0, 0, 0, 0.1);
 }
+    .education-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(135deg, rgba(255,0,60,0.08) 0%, rgba(0,0,0,0.3) 100%);
+        z-index: 1;
+    }
 
 .education-content {
     position: relative;
@@ -1470,11 +1550,30 @@ html {
     text-align: center;
     height: 100%;
 }
+    .education-card {
+        background: rgba(30, 0, 20, 0.7);
+        backdrop-filter: blur(16px);
+        border: 2px solid #ff003c;
+        border-radius: 24px;
+        padding: 2.5rem 2rem;
+        margin-bottom: 2rem;
+        transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
+        box-shadow: 0 8px 32px rgba(255,0,60,0.12);
+        text-align: center;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+    }
 
 .education-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
 }
+    .education-card:hover {
+        transform: scale(1.04) translateY(-10px) rotate(-1deg);
+        box-shadow: 0 24px 60px rgba(255,0,60,0.18);
+        border-color: #ff1e56;
+    }
 
 .degree-icon {
     width: 80px;
@@ -1490,11 +1589,32 @@ html {
     box-shadow: 0 10px 30px rgba(255, 107, 107, 0.3);
     transition: all 0.3s ease;
 }
+    .degree-icon {
+        width: 90px;
+        height: 90px;
+        background: linear-gradient(135deg, #ff003c 0%, #ff1e56 100%);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2.2rem;
+        color: #fff;
+        margin: 0 auto 1.5rem;
+        box-shadow: 0 10px 30px rgba(255, 0, 60, 0.25);
+        transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
+        border: 3px solid #fff2;
+        position: relative;
+        z-index: 2;
+    }
 
 .degree-icon.bachelor {
     background: linear-gradient(135deg, #4facfe, #00f2fe);
     box-shadow: 0 10px 30px rgba(79, 172, 254, 0.3);
 }
+    .degree-icon.bachelor {
+        background: linear-gradient(135deg, #1a1a1a 0%, #ff003c 100%);
+        box-shadow: 0 10px 30px rgba(255,0,60,0.18);
+    }
 
 .education-card:hover .degree-icon {
     transform: scale(1.1);
@@ -1509,6 +1629,15 @@ html {
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
+    .education-card h4 {
+        font-size: 1.6rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        background: linear-gradient(90deg, #ff003c 0%, #ff1e56 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
 
 .institution {
     font-size: 1.1rem;
@@ -1541,6 +1670,18 @@ html {
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
+    .education-title {
+        font-size: 3.2rem;
+        font-weight: 800;
+        margin-bottom: 1.5rem;
+        text-align: center;
+        background: linear-gradient(90deg, #ff003c 0%, #ff1e56 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        letter-spacing: 2px;
+        text-shadow: 0 2px 20px rgba(255,0,60,0.15);
+    }
 
 .intro-text {
     text-align: center;
@@ -1552,6 +1693,17 @@ html {
     line-height: 1.6;
     color: #e0e0e0;
 }
+    .intro-text {
+        text-align: center;
+        font-size: 1.25rem;
+        margin-bottom: 3rem;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 1.7;
+        color: #fff;
+        text-shadow: 0 2px 10px rgba(255,0,60,0.08);
+    }
 
 /* Floating Shapes Animation */
 .floating-shapes {

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Transition Demo - Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/@barba/core"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <style>
+        .transition-demo {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #ff003c 0%, #1a1a1a 100%);
+            color: #fff;
+        }
+        .transition-demo h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-shadow: 0 2px 20px rgba(255,0,60,0.2);
+        }
+        .transition-demo .btn {
+            margin-top: 2rem;
+            background: #ff003c;
+            border: none;
+            color: #fff;
+            font-weight: 600;
+            border-radius: 30px;
+            padding: 0.75rem 2rem;
+            transition: background 0.3s;
+        }
+        .transition-demo .btn:hover {
+            background: #ff1e56;
+        }
+    </style>
+</head>
+<body data-barba="wrapper">
+    <div class="transition-demo" data-barba="container" data-barba-namespace="transition">
+        <div class="text-center">
+            <h1>Welcome to the Transition Demo Page</h1>
+            <a href="index.html" class="btn">Back to Portfolio</a>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+        <script>
+            barba.init({
+                transitions: [
+                    {
+                        name: 'left-to-right',
+                        leave(data) {
+                            return gsap.to(data.current.container, { x: '100vw', opacity: 0, duration: 0.7, ease: 'power2.in' });
+                        },
+                        enter(data) {
+                            return gsap.from(data.next.container, { x: '-100vw', opacity: 0, duration: 0.7, ease: 'power2.out' });
+                        }
+                    },
+                    {
+                        name: 'fade',
+                        leave(data) {
+                            return gsap.to(data.current.container, { opacity: 0, duration: 0.7, ease: 'power1.inOut' });
+                        },
+                        enter(data) {
+                            return gsap.from(data.next.container, { opacity: 0, duration: 0.7, ease: 'power1.inOut' });
+                        }
+                    }
+                ]
+            });
+        </script>
+</body>
+</html>
