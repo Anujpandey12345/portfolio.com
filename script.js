@@ -101,20 +101,37 @@ function updateActiveNavLink() {
     });
 }
 
-// Smooth scrolling for navigation links
-function initSmoothScrolling() {
+// Ultra-smooth scrolling with Lenis
+let lenis;
+function initLenisSmoothScroll() {
+    lenis = new Lenis({
+        duration: 1.3, // higher for more smoothness
+        smooth: true,
+        smoothTouch: true,
+        touchMultiplier: 1.5,
+        gestureOrientation: 'vertical',
+        easing: t => 1 - Math.pow(1 - t, 3), // cubic ease-out
+    });
+
+    function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+
+    // Optional: update active nav link on scroll
+    lenis.on('scroll', updateActiveNavLink);
+
+    // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                const offset = utils.isMobile() ? 70 : 80;
-                const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
-
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
+            const href = this.getAttribute('href');
+            if (href && href.startsWith('#')) {
+                const target = document.querySelector(href);
+                if (target) {
+                    e.preventDefault();
+                    lenis.scrollTo(target, { offset: utils.isMobile() ? -70 : -80 });
+                }
             }
         });
     });
@@ -145,6 +162,7 @@ function animateCounters() {
 }
 
 // Intersection Observer for animations
+// GSAP + Intersection Observer for scroll-triggered animations
 function initIntersectionObserver() {
     const aboutSection = document.querySelector('#about');
     const skillsSection = document.querySelector('#skills');
@@ -160,6 +178,13 @@ function initIntersectionObserver() {
             if (entry.isIntersecting) {
                 animateCounters();
                 aboutObserver.unobserve(entry.target);
+                // GSAP animation example for about section
+                if (window.gsap) {
+                    gsap.fromTo('#about .about-content',
+                        { opacity: 0, y: 80 },
+                        { opacity: 1, y: 0, duration: 1.2, ease: 'power3.out' }
+                    );
+                }
             }
         });
     }, observerOptions);
@@ -173,6 +198,13 @@ function initIntersectionObserver() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 animateSkills();
+                // GSAP animation example for skills
+                if (window.gsap) {
+                    gsap.fromTo('#skills .skill-bar',
+                        { scaleX: 0 },
+                        { scaleX: 1, duration: 1, ease: 'power2.out', stagger: 0.1 }
+                    );
+                }
             }
         });
     }, { threshold: 0.3 });
@@ -1063,12 +1095,17 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize core functionality
     initAOS();
     initNavbar();
-    initSmoothScrolling();
+    initLenisSmoothScroll();
     initIntersectionObserver();
     initContactForm();
     initProjectModal();
     initBackToTop();
     initSkillInteractions();
+
+    // Example GSAP animation for page load
+    if (window.gsap) {
+        gsap.from('.navbar', { y: -80, opacity: 0, duration: 1, ease: 'power2.out' });
+    }
 
     // Initialize responsive features
     handleResize();

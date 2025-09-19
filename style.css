@@ -38,6 +38,16 @@ body {
 
 html {
     scroll-behavior: smooth;
+    min-height: 100%;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+body {
+    min-height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    position: relative;
 }
 
 
@@ -62,7 +72,8 @@ html {
     background: rgba(0, 0, 0, 0.98);
     backdrop-filter: blur(10px);
     transition: var(--transition);
-    padding: 1rem 0;
+    padding: 0.5rem 0; /* Decreased height */
+    min-height: 48px;
     box-shadow: 0 2px 20px rgba(255, 0, 60, 0.08);
 }
 
@@ -76,7 +87,8 @@ html {
 
 .navbar.scrolled {
     background: rgba(15, 23, 42, 0.98);
-    padding: 0.5rem 0;
+    padding: 0.3rem 0; /* Even smaller when scrolled */
+    min-height: 40px;
 }
 
 
@@ -208,9 +220,17 @@ html {
 
 /* Responsive improvements */
 @media (max-width: 991px) {
+    .navbar {
+        padding: 0.3rem 0;
+        min-height: 40px;
+    }
+    .navbar.scrolled {
+        padding: 0.2rem 0;
+        min-height: 36px;
+    }
     .navbar-collapse {
-        margin-top: 0.5rem;
-        padding: 0.5rem;
+        margin-top: 0.3rem;
+        padding: 0.3rem;
     }
     .hero-title {
         font-size: 2.2rem;
@@ -218,9 +238,13 @@ html {
 }
 
 @media (max-width: 767px) {
+    html, body {
+        min-width: 100vw;
+        overflow-x: hidden;
+    }
     .hero-section {
         min-height: 70vh;
-        padding: 2rem 0;
+        padding: 2rem 0 0 0;
     }
     .hero-title {
         font-size: 1.5rem;
@@ -228,14 +252,35 @@ html {
     .about-img {
         max-width: 220px;
     }
+    .navbar.fixed-top {
+        position: fixed;
+        width: 100vw;
+        left: 0;
+        right: 0;
+    }
+    .section-padding {
+        padding-top: 90px !important;
+    }
 }
 
 @media (max-width: 575px) {
+    html, body {
+        min-width: 100vw;
+        overflow-x: hidden;
+    }
     .navbar {
-        padding: 0.5rem 0;
+        padding: 0.2rem 0;
+        min-height: 36px;
+    }
+    .navbar.scrolled {
+        padding: 0.1rem 0;
+        min-height: 32px;
     }
     .hero-title {
         font-size: 1.1rem;
+    }
+    .section-padding {
+        padding-top: 90px !important;
     }
 }
 
@@ -1879,9 +1924,15 @@ html {
     }
 }
 
-/* Ensure proper spacing for first section */
+/* Ensure proper spacing for first section and mobile fit */
 .education-section:first-of-type {
     padding-top: 100px;
+}
+
+@media (max-width: 767px) {
+    .education-section:first-of-type {
+        padding-top: 90px !important;
+    }
 }
 
 
