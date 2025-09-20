@@ -104,37 +104,52 @@ function updateActiveNavLink() {
 // Ultra-smooth scrolling with Lenis
 let lenis;
 function initLenisSmoothScroll() {
-    lenis = new Lenis({
-        duration: 1.3, // higher for more smoothness
-        smooth: true,
-        smoothTouch: true,
-        touchMultiplier: 1.5,
-        gestureOrientation: 'vertical',
-        easing: t => 1 - Math.pow(1 - t, 3), // cubic ease-out
-    });
-
-    function raf(time) {
-        lenis.raf(time);
-        requestAnimationFrame(raf);
-    }
-    requestAnimationFrame(raf);
-
-    // Optional: update active nav link on scroll
-    lenis.on('scroll', updateActiveNavLink);
-
-    // Smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            const href = this.getAttribute('href');
-            if (href && href.startsWith('#')) {
-                const target = document.querySelector(href);
-                if (target) {
-                    e.preventDefault();
-                    lenis.scrollTo(target, { offset: utils.isMobile() ? -70 : -80 });
-                }
-            }
+    // Only enable Lenis on desktop, use native scroll on mobile/touch
+    if (!utils.isMobile() && !utils.isTouchDevice()) {
+        lenis = new Lenis({
+            duration: 1.3, // higher for more smoothness
+            smooth: true,
+            gestureOrientation: 'vertical',
+            easing: t => 1 - Math.pow(1 - t, 3), // cubic ease-out
         });
-    });
+
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+
+        // Optional: update active nav link on scroll
+        lenis.on('scroll', updateActiveNavLink);
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href && href.startsWith('#')) {
+                    const target = document.querySelector(href);
+                    if (target) {
+                        e.preventDefault();
+                        lenis.scrollTo(target, { offset: -80 });
+                    }
+                }
+            });
+        });
+    } else {
+        // On mobile/touch, use native smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href && href.startsWith('#')) {
+                    const target = document.querySelector(href);
+                    if (target) {
+                        e.preventDefault();
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                }
+            });
+        });
+    }
 }
 
 // Counter animation for statistics
